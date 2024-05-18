@@ -1,1 +1,0 @@
-# this is made for  educational purpose for bit 4th sem frontend project  
