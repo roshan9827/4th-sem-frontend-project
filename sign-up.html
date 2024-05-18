@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrimaLife.com</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="browsericon.png" type="image/icon type">
+</head>
+<body>
+    <div class="banner">
+        <div class="loginBG"></div>
+        <header>
+            <div class="navbar">
+                <div class="logo1-border">
+                    <div class="logo">
+                        <a href="index.html"><img src="logo without name.png" alt="logo"></a>
+                        <p class="colorchange">ⲥⲅⳕⲙⲁⳑⳕ⳨ⲉ</p>
+                    </div>
+                </div>
+                <a href="login.html" class="border" id="login-btn"><i class="fas fa-sign-in-alt"></i>Log In</a>
+                <a href="index.html" class="border" id="home"><i class="fas fa-home"></i>Home</a>
+                <a href="About.html" class="border" id="about"><i class="fas fa-user"></i>About</a>
+                <a href="index.html#ourteam" class="border"><i class="fas fa-headset"></i>Contact Us</a>
+                <a href="donate.html" class="border" id="donate"><i class="fas fa-hand-holding-medical"></i>Donate</a>
+                <a href="request.html" class="border" id="request"><i class="fas fa-chevron-circle-down"></i>Request</a>
+                <a href="#" class="border" onclick="logout()"><i class="fas fa-sign-out-alt"></i>Log Out</a>
+                <div class="logo2"></div>
+            </div>
+        </header>
+        <div class="signup">
+            <h2>SIGN UP</h2>
+            <br>
+            <form name="signup_form" onsubmit="signupsubmit_form()">
+                <label for="name">Name :</label><br>
+                <input type="text" class="inbox2" id="name" placeholder="Enter your name" required><br><br>
+                
+                <label>Gender :</label><br>
+                <label><input type="radio" name="sex" value="Male"> Male</label>
+                <label><input type="radio" name="sex" value="Female"> Female</label><br><br>
+                
+                <label>Date Of Birth :</label><br>
+                <input class="inbox2" type="date" placeholder="dob"><br><br>
+                
+                <label>Mobile No :</label><br>
+                <input type="text" class="inbox2" placeholder="Enter your Number"><br><br>
+                
+                <label>Country :</label><br>
+                <input type="text" class="inbox2" placeholder="Enter your country" required><br><br>
+                
+                <label>State :</label><br>
+                <input type="text" class="inbox2" placeholder="Enter your state" required><br><br>
+                
+                <label>City :</label><br>
+                <input type="text" class="inbox2" id="email" placeholder="Enter your city" required><br><br>
+                
+                <label for="email">Email:</label><br>
+                <input type="email" class="inbox2" id="email" placeholder="Enter your email" required><br><br>
+                
+                <label for="password">Password:</label><br>
+                <input type="password" class="inbox2" id="password" placeholder="Enter your password" required><br><br>
+                
+                <label for="confirm password">Confirm Password:</label><br>
+                <input type="password" class="inbox2" id="confirm_password" placeholder="Confirm your password" required><br><br>
+                
+                <input class="btnns" id="btn1" type="submit" value="Sign Up">
+                <p>Already have an Account ? <span>Click below !</span></p>
+                <input class="btnns" id="btn3" type="button" value="Log In" onclick="login()">
+            </form>
+        </div>
+    </div>
+    <footer style="background-color: #37a2b4cc;">
+        <div class="foter">
+            <div class="box1">
+                <div class="footerlogo"></div>
+                <p>Criminalife is a blood donation site. Where crima="Blood" & "life" meaning blood is central to life. Criminalife is made with the vision to help people in need. To help the patient’s family and worrying about finding the blood.</p>
+            </div>
+            <div class="box4">
+                <h4>Contact Info</h4>
+                <p>Address : Kathmandu, Nepal;</p>
+                <p>Phone : +977 9827949465</p>
+                <p>P.O.Box: xxxx Kathmandu, Nepal</p>
+                <p>Fax: xxxxxxxxxx</p>
+                <p>Email:<a>team@CrimaLife.com</a></p>
+            </div>
+            <div class="box2">
+                <h4>Quick Links</h4>
+                <a href="About.html" class="border">About</a>
+                <a href="donate.html" class="border">Donate</a>
+                <a href="request.html" class="border">Request</a>
+            </div>
+            <div class="box3">
+                <h4>Connect with us</h4>
+                <p>Feel free to connect with us for more info. We are always here to help you.</p>
+                <div class="icons">
+                    <a href="https://www.facebook.com" target="_blank" id="facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com" target="_blank" id="instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank" id="linkedin"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://twitter.com/?lang=en" id="twitter" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/" id="youtube" target="_blank" ><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div id="lastline">Copyright &copy; 2024 &hearts;CrimaLife&hearts; | All Rights Reserved | Privacy Policy | Made with love &hearts; Arya &hearts;</div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

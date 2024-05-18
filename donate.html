@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrimaLife.com</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="browsericon.png" type="image/icon type">
+</head>
+<body>
+    <div class="donatebanner">
+    <header>
+        <div class="navbar" style="background: transparent;">
+            <div class="logo1-border">
+                <div class="logo">
+                    <a href="index.html"><img src="logo without name.png" alt="logo"></a><p class="colorchange">ⲥⲅⳕⲙⲁⳑⳕ⳨ⲉ</p></div>
+            </div>
+                <a href="login.html" class="border" id="login-btn"><i class="fas fa-sign-in-alt"></i>Log In</a>
+                <a href="index.html" class="border" id="home"><i class="fas fa-home"></i>Home</a>
+                <a href="About.html" class="border" id="about"><i class="fas fa-user"></i>About</a>
+                <a href="index.html#ourteam" class="border"><i class="fas fa-headset"></i>Contact Us</a>
+                <a href="#" class="border" id="donate"><i class="fas fa-hand-holding-medical"></i>Donate</a>
+                <a href="request.html" class="border" id="request"><i class="fas fa-chevron-circle-down"></i>Request</a>
+                <a href="#" class="border" onclick="logout()"><i class="fas fa-sign-out-alt"></i>Log Out</a>
+                <div class="logo2"></div>
+        </div> 
+    </header>
+    <h1 id="dtop">Donor Registration</h1>
+    <div class="personal-info">
+        <h2 class="title">Personal Info</h2>
+        <form action="" id="personal-info">
+            <div class="form-items">
+                <div class="left">
+                    <label for="name">Name*</label>
+                    <input type="text" id="name" name="name" autocomplete="name" required placeholder="Name">
+
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" name="dob" id="dob">
+
+                    <label for="gender">Gender*</label>
+                    <select name="gender" id="gender" required>
+                        <option value="" disabled selected>Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+
+                    </select>
+
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required placeholder="E-mail">
+
+                </div>
+
+                <div class="right">
+
+                    <label for="phone">Phone Number*</label>
+                    <input type="tel" id="phone" name="phone" autocomplete="mobile" required placeholder="Phone Number">
+
+                    <label for="province">Province*</label>
+                    <select name="province" id="province" required>
+                        <option value="" disabled selected>Select your province</option>
+                        <option value="1">Province 1</option>
+                        <option value="2">Province 2</option>
+                        <option value="3">Province 3</option>
+                        <option value="4">Province 4</option>
+                        <option value="5">Province 5</option>
+                        <option value="6">Province 6</option>
+                        <option value="7">Province 7</option>
+                    </select>
+
+                    <label for="city">City</label>
+                    <input type="text" id="city" placeholder="enter your name of city">
+                    <label for="city">Occupation</label>
+                    <input type="text" id="ocupation" placeholder="write your Occupation">
+                </div>
+            </div>
+            <button type="submit" id="next" onclick="showmedicalinfo(event)">Next</button>
+        </form>
+    </div>
+    <br>
+    <div class="medical-info" style="display: none;">
+        <h2 class="title">Medical Info</h2>
+        <form action="" id="medical-info" onsubmit="donateform()">
+            <div class="medicalquries">
+                <div class="left">
+                    <label for="blood-group">
+                        Blood Group*
+                    </label>
+                    <select name="blood-group" id="blood-group" required>
+                        <option value="" disabled selected>Select your blood group</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                    </select>
+    
+                    <label for="last-donation-date">Last Donation Date</label>
+                    <input type="date" name="last-donation-date" id="last-donation-date">
+
+                    <label for="weight">Weights(kg)*</label>
+                    <input type="number" name="weight" placeholder="Enter your weight" required>
+
+                    <label for="blood pressure">Blood pressure(mmHg)*</label>
+                    <input type="text" name="blood pressure" placeholder="Enter your blood pressure" required>
+
+                    
+                    <label for="reason of donating">Reason of donating blood*</label>
+                    <input type="text" name="reason of donating of blood" placeholder="Why you want to donate?" required>
+                </div>
+                <div class="rightside" >
+                    <label required>Did you ever donate blood before?</label>
+                    <label><input type="radio" name="donationHistory" value="yes" required> Yes</label>
+                    <label><input type="radio" name="donationHistory" value="no" required> No</label>
+                
+                    <label>Do you suffer from any diseases?</label>
+                    <label><input type="radio" name="diseases" value="yes" required> Yes</label>
+                    <label><input type="radio" name="diseases" value="no" required> No</label>
+                    
+                    <label>Do you have allergies?</label>
+                    <label><input type="radio" name="allergies" value="yes" required> Yes</label>
+                    <label><input type="radio" name="allergies" value="no" required> No</label>
+                    
+                    <label>Have you ever had a positive Blood test for HbsAg, Hcv, HIV?</label>
+                    <label><input type="radio" name="positiveBloodTest" value="yes" required> Yes</label>
+                    <label><input type="radio" name="positiveBloodTest" value="no" required> No</label>
+                    
+                    <label>Do you have any cardiac problems?</label>
+                    <label><input type="radio" name="cardiacProblems" value="yes" required> Yes</label>
+                    <label><input type="radio" name="cardiacProblems" value="no" required> No</label>
+                    
+                    <label>Do you suffer from any bleeding disorders?</label>
+                    <label><input type="radio" name="bleedingDisorders" value="yes" required> Yes</label>
+                    <label><input type="radio" name="bleedingDisorders" value="no" required> No</label>
+                    
+                    <label>Do you take medication?</label>
+                    <label><input type="radio" name="medication" value="yes" required> Yes</label>
+                    <label><input type="radio" name="medication" value="no" required> No</label>
+                    <label>Do you get tattos in last 3 months?</label>
+                    <label><input type="radio" name="tattos" value="yes" required> Yes</label>
+                    <label><input type="radio" name="tattos" value="no" required> No</label>
+                    </div>
+            </div>
+            <button type="submit" id="next">Submit</button>
+        </form>
+    </div>
+</div>
+    <footer style="background-color: #e0363bc7;">
+        <div class="foter">
+            <div class="box1">
+                <div class="footerlogo">
+                </div>
+                    <p>Crimalife is a blood donation site. Where crima="Blood" & "life" meaning blood is central to life. CrimaLife is made with the vision to help people in need. To help the patient’s family and worrying about finding the blood.</p>
+            </div>
+            <div class="box4">
+                <h4>Contact Info</h4>
+                <p>Address : Kathmandu,Nepal;</p>
+                   <p>Phone : +977 9827949465</p>
+                   <p>P.O.Box: xxxx Kathmandu,Nepal</p>
+                   <p>Fax: xxxxxxxxxx</p>
+                    <p>Email:<a>team@CrimaLife.com</a></p>
+            </div>
+            <div class="box2">
+                <h4>Quick Links</h4>
+                <a href="About.html" class="border">About</a>
+                <a href="donate.html" class="border">Donate</a>
+                <a href="request.html" class="border">Request</a>
+            </div>
+            <div class="box3">
+            <h4>Connect with us</h4>
+                <p>Feel free to connet with us for more info.We are always here to help you..</p>
+            <div class="icons">
+                <a href="https://www.facebook.com/roshan.tolangi.7" target="_blank" id="facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/i_am_arya_1101/" target="_blank" id="instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/roshan-tolangi-130233284/" target="_blank" id="linkedin"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://twitter.com/?lang=en" id="twitter" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.youtube.com/" id="youtube" target="_blank" ><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            </div>
+            <div id="lastline">Copyright &copy; 2024 &hearts;crimalife&hearts; | All Rights Reserved | Privacy Policy |
+                made with love &hearts;&REG;Arya&hearts;
+            </div>
+    </div>
+</footer>
+    <script src="main.js"></script>
+</body>
+</html>
